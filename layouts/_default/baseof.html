@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.LanguageCode | default "en" }}" class="no-js">
+  <head>
+    <title>{{ .Site.Title }} {{ with .Title }} | {{ . }}{{ end }}</title>    
+  </head>
+  <body>        
+    <div class="content">            
+      {{ block "main" . }}{{ end }}      
+  </body>
+</html>  

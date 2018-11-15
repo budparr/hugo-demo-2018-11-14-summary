@@ -1,0 +1,14 @@
+{{define "main"}}
+  {{range .Data.Pages}}
+    <h1>{{.Title}}</h1>
+    {{ .Summary | safeHTML }}
+    {{/* {{if .Truncated }}
+      <div style="padding:8px;background-color:#eee;">
+        TRUNCATED. This does not work.
+      {{ $content_after_summary := replace .Content .Summary "" }}            
+      {{ $content_after_summary | safeHTML   }}
+      </div>
+    {{ end }}
+    */}}
+  {{ end }}
+{{end}}
